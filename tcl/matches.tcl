@@ -32,3 +32,40 @@ foreach match $match_list {
     puts $eval_string;
     db eval $eval_string;
 }
+
+
+#set eval_string "select * from entrant_table order by entrant_name";
+#set tmp [db eval $eval_string];
+#puts $tmp;
+
+source html_utilities.tcl
+set html_out [open matches.html w];
+html_header;
+table_header "Match Results";
+table_row_start;
+table_data PLAYER1;
+table_data PLAYER2;
+table_data "DATE PLAYED";
+table_data WINNER;
+table_row_end;
+table_spacer 4;
+
+foreach match $match_list {
+    set player1 [lindex [split [lindex $match 0] ","] 0]
+    set player2 [lindex [split [lindex $match 0] ","] 1]
+    set eval_string "select entrant_nickname from entrant_table where entrant_name=\"$player1\"";
+    set player1 [lindex [db eval $eval_string] 0]; 
+    set eval_string "select entrant_nickname from entrant_table where entrant_name=\"$player2\"";
+    set player2 [lindex [db eval $eval_string] 0];
+    set date_played [lindex $match 1]
+    set winner [lindex $match 2]
+    
+    table_row_start;
+    table_data $player1;
+    table_data $player2;
+    table_data $date_played;
+    table_data $winner;
+    table_row_end;
+}
+table_trailer;
+html_trailer;
