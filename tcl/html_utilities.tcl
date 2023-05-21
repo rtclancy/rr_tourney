@@ -44,11 +44,11 @@ proc table_trailer {} {
 }
 
 #width:200px;
-proc table_data {data {bold 0}} {
+proc table_data {data {bold 0} {bgcolor white} {color black}} {
     if {$bold} {
-	puts $::html_out "<td style=\"color:white\"><b>$data</td>";
+	puts $::html_out "<td style=\"background-color:$bgcolo;color:$color;\"><b>$data</td>";
     } else {
-	puts $::html_out "<td style=\"color:white\">$data</td>";
+	puts $::html_out "<td style=\"background-color:$bgcolor;color:$color;\">$data</td>";
     }
 }
 proc table_row_start {} {

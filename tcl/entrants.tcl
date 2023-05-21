@@ -5,7 +5,7 @@ package require sqlite3
 set entrant_list {
     {{Dennis}   {Le Frenchman}                    {Yes}}
     {{Bob}      {Sandbagger Bob}                  {No} }
-    {{Joe}      {Joey 3-Wood}                     {No} }
+    {{Joe}      {Joey 3-Wood}                     {Yes} }
     {{Marshall} {Marsha,Marsha,Marsha}            {No} }
     {{Kenny}    {D-Day Kenny}                     {No} }
     {{SteveC}   {Steve Ohhh!!!}                   {No} }
@@ -17,14 +17,18 @@ set entrant_list {
 file delete -force  "../db/rr_tourney.db";
 sqlite3 db "../db/rr_tourney.db";
 
-db eval {CREATE TABLE entrant_table(entrant_name text,entrant_nickname text,entrant_paid_up text)};
+db eval {CREATE TABLE entrant_table(entrant_name text,entrant_nickname text,entrant_paid_up text,total_points int,wins int,losses int,ties int)};
 db eval {CREATE TABLE match_table(match_key text,date_played text,winning_player text)};
 
 foreach entrant $entrant_list {
     db eval "insert into entrant_table values( \
     '[lindex $entrant 0]',
     '[lindex $entrant 1]',
-    '[lindex $entrant 2]'
+    '[lindex $entrant 2]',
+    0,
+    0,
+    0,
+    0
     )";
 }
 
