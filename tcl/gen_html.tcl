@@ -84,7 +84,7 @@ foreach entrant $entrant_list_nickname {
 
 
 html_header;
-table_header "Match Results";
+table_header "Sandbagger Invitational 2023 Match Results" center [expr [llength $entrant_list_name] + 5];
 set eval_string "select entrant_nickname from entrant_table order by total_points desc";
 set entrant_list_nickname [db eval $eval_string];
 puts $entrant_list_nickname;

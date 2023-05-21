@@ -26,14 +26,14 @@ proc html_trailer {} {
 #    left: 0;
 #    width: 300px;\"
 
-proc table_header {title {alignment left}} {
+proc table_header {title {alignment left} {span 1}} {
     puts $::html_out "<table 
-bgcolor=\"#000000\" border=\"5\"
+bgcolor=\"#808080\" border=\"5\"
 align=\"$alignment\"
 >";
     puts $::html_out "<tbody>"
     puts $::html_out "<tr>";
-    puts $::html_out "<td style=\"color:white\"><b>$title</td>";
+    puts $::html_out "<td style=\"color:white\" colspan=$span><b>$title</td>";
     puts $::html_out "</tr>";
 
 }
