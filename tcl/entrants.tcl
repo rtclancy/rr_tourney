@@ -10,8 +10,11 @@ set entrant_list {
     {{Kenny}    {D-Day Kenny}                     {No} }
     {{SteveC}   {Steve Ohhh!!!}                   {No} }
     {{Seth}     {Jets Fan}                        {No} }
-    {{MikeF}    {Fitzy}                           {No} }
+    {{MikeF}    {Fitzy}                           {Yes}}
     {{SteveL}   {Hammer}                          {No} }
+    {{Brian}    {The Lemonator}                   {No} }
+    {{JonB}     {JB}                              {No} }
+    {{MikeA}    {Mikey}                           {No} }
 };
 
 file delete -force  "../db/rr_tourney.db";

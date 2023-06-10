@@ -1,6 +1,17 @@
 #!/usr/bin/tclsh
 package require sqlite3
 set match_list {
+
+    {{Bob,Brian}     6/10/2023 Bob}
+    {{Bob,Seth}      6/10/2023 Bob}
+    {{Joe,Seth}      6/10/2023 Seth}
+    {{Joe,Brian}     6/10/2023 Brian}
+    {{Marshall,JonB} 6/10/2023 JonB}
+    {{Marshall,Ken}  6/10/2023 Marshall}
+    {{JonB,SteveC}   6/10/2023 JonB}
+    {{SteveC,Kenny}  6/10/2023 Kenny}
+    {{MikeA,MikeF}   6/10/2023 MikeA}
+
     {{Bob,Dennis} 5/9/2023 Bob}
     
     {{Dennis,SteveC} 5/13/2023 Dennis}
@@ -10,6 +21,7 @@ set match_list {
     {{Kenny,MikeF} 5/13/2023 Kenny}
     {{SteveL,Kenny} 5/13/2023 SteveL}
 
+    {{Bob,Marshall} 6/3/2023 Bob}
     
 }
 
