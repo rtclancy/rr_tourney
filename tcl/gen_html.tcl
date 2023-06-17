@@ -57,9 +57,11 @@ foreach indexa $entrant_list_nickname {
 	    set eval_string "select date_played from match_table where match_key=\"$match_key\"";
 	    set date [db eval $eval_string];
 	    if {$winner != "None"} {
-		set eval_string "select entrant_nickname from entrant_table where entrant_name=\"$winner\"";
-		set winner [db eval $eval_string];
-		set winner [lindex $winner 0];
+		if {$winner != "Tie"} {
+		    set eval_string "select entrant_nickname from entrant_table where entrant_name=\"$winner\"";
+		    set winner [db eval $eval_string];
+		    set winner [lindex $winner 0];
+		}
 		set table_data($indexa,$indexb) $winner<br>$date;
 	    }
  	}

@@ -2,6 +2,12 @@
 package require sqlite3
 set match_list {
 
+    {{JonB,MikeA}       6/17/2023 Tie}
+
+    {{Bob,Joe}       6/17/2023 Joe}
+    {{MikeB,Joe}     6/17/2023 Joe}
+    {{MikeB,Bob}     6/17/2023 Tie}
+
     {{Bob,Brian}     6/10/2023 Bob}
     {{Bob,Seth}      6/10/2023 Bob}
     {{Joe,Seth}      6/10/2023 Seth}
