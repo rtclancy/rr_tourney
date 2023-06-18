@@ -13,7 +13,7 @@ set match_list {
     {{Joe,Seth}      6/10/2023 Seth}
     {{Joe,Brian}     6/10/2023 Brian}
     {{Marshall,JonB} 6/10/2023 JonB}
-    {{Marshall,Ken}  6/10/2023 Marshall}
+    {{Marshall,Kenny}  6/10/2023 Marshall}
     {{JonB,SteveC}   6/10/2023 JonB}
     {{SteveC,Kenny}  6/10/2023 Kenny}
     {{MikeA,MikeF}   6/10/2023 MikeA}
