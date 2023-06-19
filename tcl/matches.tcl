@@ -5,8 +5,15 @@ proc divider {} {
 }
 set match_list {
 
-    {{JonB,MikeA}       6/17/2023 Tie}
+    {{MikeF,JonB}       6/19/2023 MikeF}
+    {{Marshall,MikeF}       6/19/2023 MikeF}
+    {{JonB,MikeB}           6/19/2023 MikeB}
+    {{Marshall,MikeB}       6/19/2023 MikeB}
 
+    {{Marshall,SteveC}       6/18/2023 Marshall}
+
+    {{JonB,MikeA}       6/17/2023 Tie}
+    
     {{Bob,Joe}       6/17/2023 Joe}
     {{MikeB,Joe}     6/17/2023 Joe}
     {{MikeB,Bob}     6/17/2023 Tie}

@@ -5,7 +5,7 @@ package require sqlite3
 set entrant_list {
     {{Dennis}   {Le Frenchman}                    {Yes}}
     {{Bob}      {Sandbagger Bob}                  {Yes}}
-    {{Joe}      {Joey 3-Wood}                     {Yes}}
+    {{Joe}      {Joey 3Wood  }                    {Yes}}
     {{Marshall} {Marsha,Marsha,Marsha}            {No} }
     {{Kenny}    {D-Day Kenny}                     {No} }
     {{SteveC}   {Steve Ohhh!!!}                   {No} }
