@@ -6,7 +6,7 @@ proc divider {} {
 set match_list {
 
     {{Brian,MikeB}        7/2/2023 MikeB      Hunter}
-    {{MikeA,MikeB}        7/2/2023 MikeB      Hunter}
+    {{MikeA,MikeB}        7/2/2023 MikeA      Hunter}
     {{Brian,Marshall}     7/2/2023 Brian      Hunter}
     {{MikeA,Marshall}     7/2/2023 Marshall   Hunter}
 
