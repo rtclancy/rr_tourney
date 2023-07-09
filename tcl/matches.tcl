@@ -57,6 +57,9 @@ set match_list {
 sqlite3 db "../db/rr_tourney.db";
 
 foreach match $match_list {
+    if {[llength $match] != 4} {
+	lappend match "unknown";
+    }
     set match_key1 [lindex $match 0];
     set match_key2 [lindex [split [lindex $match 0] ","] 1],[lindex [split [lindex $match 0] ","] 0]
     #puts $match_key1;
@@ -79,7 +82,9 @@ foreach match $match_list {
     #set eval_string "select entrant_nickname from entrant_table where entrant_name=\"[lindex $match 2]\"";
     #set nickname [db eval $eval_string];
     set nickname [lindex $match 2];
-    set eval_string "update match_table set date_played=\"[lindex $match 1]\", winning_player=\"$nickname\" where match_key=\"$match_key\"";
+    set venue [lindex $match 3];
+    puts $match
+    set eval_string "update match_table set date_played=\"[lindex $match 1]\", winning_player=\"$nickname\", venue=\"$venue\" where match_key=\"$match_key\"";
     #puts $eval_string;
     db eval $eval_string;
 }

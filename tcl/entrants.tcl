@@ -13,7 +13,7 @@ set entrant_list {
     {{MikeF}    {Fitzy}                           {No} }
     {{SteveL}   {Hammer}                          {No} }
     {{Brian}    {The Lemonator}                   {Yes} }
-    {{JonB}     {JB}                              {No} }
+    {{JonB}     {Plastic Santa}                   {No} }
     {{MikeA}    {Mikey}                           {No} }
     {{MikeB}    {Bunker Buster Belden}            {No} }
     {{Dean}     {Deano Tomato Mozzarella}         {No} }
@@ -23,7 +23,7 @@ file delete -force  "../db/rr_tourney.db";
 sqlite3 db "../db/rr_tourney.db";
 
 db eval {CREATE TABLE entrant_table(entrant_name text,entrant_nickname text,entrant_paid_up text,total_points int,wins int,losses int,ties int)};
-db eval {CREATE TABLE match_table(match_key text,date_played text,winning_player text)};
+db eval {CREATE TABLE match_table(match_key text,date_played text,winning_player text,venue text)};
 
 foreach entrant $entrant_list {
     db eval "insert into entrant_table values( \
@@ -49,7 +49,8 @@ foreach playerA "$entrant_list" {
 		db eval "insert into match_table values( \
 		    	'$playerA,$playerB',
 			'00/00/0000',
-			'None'
+			'None',
+			'Unknown'
 			)";
 	    }
 	}
