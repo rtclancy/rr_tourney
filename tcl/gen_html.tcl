@@ -58,6 +58,10 @@ foreach indexa $entrant_list_nickname {
 	    set date [db eval $eval_string];
 	    set eval_string "select venue from match_table where match_key=\"$match_key\"";
 	    set venue [db eval $eval_string];
+	    if {$venue == "unknown"} {set venue " ";}
+	    regsub {\{} $venue {} venue;
+	    regsub {\}} $venue {} venue;
+	    #puts $venue;
 	    if {$winner != "None"} {
 		if {$winner != "Tie"} {
 		    set eval_string "select entrant_nickname from entrant_table where entrant_name=\"$winner\"";

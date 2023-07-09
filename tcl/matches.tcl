@@ -4,6 +4,8 @@ proc divider {} {
     puts "***************************************************";
 }
 set match_list {
+    {{Dennis,MikeB}         7/9/2023 Tie   "Quarry Ridge"}
+    {{Dennis,JonB}         7/9/2023 JonB   "Quarry Ridge"}
 
     {{Brian,MikeB}        7/2/2023 MikeB      Hunter}
     {{MikeA,MikeB}        7/2/2023 MikeA      Hunter}
