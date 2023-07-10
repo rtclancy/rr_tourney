@@ -6,7 +6,7 @@ set entrant_list {
     {{Dennis}   {Le Frenchman}                    {Yes}}
     {{Bob}      {Sandbagger Bob}                  {Yes}}
     {{Joe}      {Joey 3Wood  }                    {Yes}}
-    {{Marshall} {Marsha,Marsha,Marsha}            {No} }
+    {{Marshall} {Marsha,Marsha,Marsha}            {Yes} }
     {{Kenny}    {D-Day Kenny}                     {No} }
     {{SteveC}   {Steve Ohhh!!!}                   {No} }
     {{Seth}     {Jets Fan}                        {No} }
@@ -16,7 +16,7 @@ set entrant_list {
     {{JonB}     {Plastic Santa}                   {No} }
     {{MikeA}    {Mikey}                           {No} }
     {{MikeB}    {Bunker Buster Belden}            {No} }
-    {{Dean}     {Deano Tomato Mozzarella}         {No} }
+    {{Dean}     {Deano Tomato Mozzarella}         {Yes} }
 };
 
 file delete -force  "../db/rr_tourney.db";
